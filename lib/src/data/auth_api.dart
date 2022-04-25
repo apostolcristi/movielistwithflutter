@@ -30,7 +30,8 @@ class AuthApi {
 
     final List<int> favorite = _getCurrentFavorites();
 
-    return AppUser(email: email, uid: credential.user!.uid, username: credential.user!.displayName!);
+    return AppUser(
+        email: email, uid: credential.user!.uid, username: credential.user!.displayName!, favoriteMovies: favorite);
   }
 
   Future<AppUser> create({required String email, required String password, required String username}) async {

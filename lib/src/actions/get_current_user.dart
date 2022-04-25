@@ -1,7 +1,9 @@
 part of 'index.dart';
+
 @freezed
 class GetCurrentUser with _$GetCurrentUser implements AppAction {
   const factory GetCurrentUser() = GetCurrentUserStart;
+
   @Implements<UserAction>()
   const factory GetCurrentUser.successful(AppUser? user) = GetCurrentUserSuccessful;
 
